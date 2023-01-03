@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- TODO: icon, ogp, title -->
+</head>
+
+<body>
+
+    <div>
+
+        <!-- HugoのContentによって生成される部分のため、HTMLタグを変えることは不可能 -->
+        <p>表示確認用の記事です。</p>
+        <h2 id="各種記法">各種記法</h2>
+        <ul>
+            <li>リスト1</li>
+            <li>リスト2
+                <ul>
+                    <li>リスト2-1</li>
+                    <li>リスト2-2</li>
+                </ul>
+            </li>
+            <li>リスト3</li>
+        </ul>
+        <ol>
+            <li>リスト1</li>
+            <li>リスト2</li>
+            <li>リスト3</li>
+        </ol>
+        <blockquote>
+            <p>あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+                またそのなかでいっしょになったたくさんのひとたち、ファゼーロとロザーロ、羊飼のミーロや、顔の赤いこどもたち、地主のテーモ、山猫博士のボーガント・デストゥパーゴなど、いまこの暗い巨きな石の建物のなかで考えていると、みんなむかし風のなつかしい青い幻燈のように思われます。では、わたくしはいつかの小さなみだしをつけながら、しずかにあの年のイーハトーヴォの五月から十月までを書きつけましょう。
+            </p>
+        </blockquote>
+        <table>
+            <thead>
+                <tr>
+                    <th style="text-align:left">項目1</th>
+                    <th style="text-align:center">項目2</th>
+                    <th style="text-align:right">項目3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align:left">テキスト1</td>
+                    <td style="text-align:center">テキスト2</td>
+                    <td style="text-align:right">テキスト3</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">テキスト1</td>
+                    <td style="text-align:center">テキスト2</td>
+                    <td style="text-align:right">テキスト3</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>強調</strong> <em>斜体</em> <del>取り消し</del></p>
+        <p>インラインコード -&gt; <code>Discord.Client()</code></p>
+        <pre tabindex="0"><code>const Discord = require(&#39;discord.js&#39;)
+const admin = require(&#34;firebase-admin&#34;);
+const client = new Discord.Client()
+
+var getFirebaseDatabase = function() {
+    let serviceAccount = require(`./serviceAccountKey.json`)
+    admin.initializeApp({
+        credential: admin.credential.cert(serviceAccount),
+        databaseURL: &#34;https://{project-id}.firebaseio.com/&#34;
+    })
+    return admin.database()
+}
+</code></pre>
+
+        <div class="highlight">
+            <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Discord</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;discord.js&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">admin</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;firebase-admin&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">client</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Discord</span>.<span style="color:#a6e22e">Client</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">getFirebaseDatabase</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">serviceAccount</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">`./serviceAccountKey.json`</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">admin</span>.<span style="color:#a6e22e">initializeApp</span>({
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">credential</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">admin</span>.<span style="color:#a6e22e">credential</span>.<span style="color:#a6e22e">cert</span>(<span style="color:#a6e22e">serviceAccount</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">databaseURL</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://{project-id}.firebaseio.com/&#34;</span>
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">admin</span>.<span style="color:#a6e22e">database</span>()
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre>
+        </div>
+
+        <h2 id="各種埋め込み表示">各種埋め込み表示</h2>
+        <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr">It&#39;s been quite a year!<br><br>Step back in time and see how it compared with the
+                rest of them with this nifty contribution graph generator from <a
+                    href="https://twitter.com/sallar?ref_src=twsrc%5Etfw">@sallar</a>: <a
+                    href="https://t.co/bKGBp9eH1S">https://t.co/bKGBp9eH1S</a> <a
+                    href="https://t.co/fg7RmOXgfc">pic.twitter.com/fg7RmOXgfc</a></p>&mdash; GitHub (@github) <a
+                href="https://twitter.com/github/status/1609112210361516032?ref_src=twsrc%5Etfw">December 31, 2022</a>
+        </blockquote>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe src="https://www.youtube.com/embed/yi1TbzML2cU"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen
+                title="YouTube Video"></iframe>
+        </div>
+
+        <p>😂 🤔 🙏 🙇</p>
+        <h2 id="だしの取り方---北大路魯山人">だしの取り方 - 北大路魯山人</h2>
+        <!-- raw HTML omitted -->
+        <p>かつおぶしはどういうふうに選択し、どういうふうにして削るか。まず、かつおぶしの良否の簡単な選択法をご披露しよう。よいかつおぶしは、かつおぶしとかつおぶしとを叩《たた》き合わすと、カンカンといってまるで拍子木か、ある種の石を鳴らすみたいな音がするもの。虫の入った木のように、ポトポトと音のする湿《しめ》っぽい匂《にお》いのするものは悪いかつおぶし。
+        </p>
+        <p>本節と亀節ならば、亀節がよい。見た目に小さくとも、刺身にして美味い大きいものがやはりかつおぶしにしても美味だ。見たところ、堂々としていても、本節は大味で、値も亀節の方が安く手に入る。</p>
+        <p>次に削り方だが、まず切れ味のよい鉋《かんな》を持つこと。切れ味の悪い鉋ではかつおぶしを削ることはむずかしい。赤錆《あかさび》になったり刃の鈍くなったもので、ゴリゴリとごつく削っていたのでは、かつおぶしがたとえ百円のものでも、五十円の値打ちすらないものになる。
+        </p>
+        <p>どんなふうに削ったのがいいだしになるかというと、削ったかつおぶしがまるで雁皮紙《がんぴし》のごとく薄く、ガラスのように光沢のあるものでなければならない。こういうのでないと、よいだしが出ない。削り下手なかつおぶしは、死んだだしが出る。生きたいいだしを作るには、どうしても上等のよく切れる鉋を持たねばならない。そしてだしをとる時は、グラグラッと湯のたぎるところへ、サッと入れた瞬間、充分にだしができている。それをいつまでも入れておいて、クタクタ煮るのではろくなだしは出ず、かえって味をそこなうばかりである。いわゆる二番だしというようなものにしてはいけない。
+        </p>
+        <p>そこで、まず第一に、刃の切れる、台の平らな鉋をお持ちになることをお勧めしたい。かつおぶしを非常に薄く削るということは経済的であり、能率的でもある。</p>
+        <p>―― <a href="https://www.aozora.gr.jp/cards/001403/card49986.html">青空文庫より引用</a></p>
+    </div>
+</body>
+
+</html>
